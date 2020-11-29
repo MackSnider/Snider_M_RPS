@@ -1,14 +1,16 @@
 from random import randint
 
-from gameComponents import gameVars, winLose
+from gameComponents import gameVars, winLose, comparisonPackage
 
 
 while gameVars.player == False:
-	print("ROCK PAPER SCISSORS BATTLE TO THE DEATH")
+	print("ROCK PAPER SCISSORS! BATTLE TO THE DEATH")
+	print("|||||||||||||||||||||||||||||||||||||||||")
 	print("Computer Lives:", gameVars.computer_lives, "/", gameVars.total_lives)
-	print("Computer Lives:", gameVars.player_lives, "/", gameVars.total_lives)
-
+	print("Player Lives:", gameVars.player_lives, "/", gameVars.total_lives)
+	print("|||||||||||||||||||||||||||||||||||||||||")
 	print("Choose your desired weapon!")
+	print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-")
 	print("You can also quit at any point by typing quit\n")
 
 	gameVars.player = input("Choose rock, paper or scissors: \n")
@@ -25,32 +27,9 @@ while gameVars.player == False:
 
 	print("AI chose: " + computer)
 
-	if (computer == gameVars.player):
-		print("tie")
 
-	elif (computer == "rock"):
-		if (gameVars.player == "scissors"):
-			gameVars.player_lives -= 1
-			print("You Lose! That's pretty unfortunate. Player Lives: ", player_lives)
-		else:
-			print("You Win! Congrats, winner")
-			gameVars.computer_lives -= 1
+	comparisonPackage.comparison(gameVars.player)
 
-	elif (computer == "paper"):
-		if (gameVars.player == "scissors"):
-			gameVars.player_lives -=1
-			print("You Lose! I'm laughing at you. Player Lives: ", player_lives)
-		else:
-			print("You Win! Amazing work")
-			gameVars.computer_lives -= 1
-
-	elif (computer == "scissors"):
-		if (gameVars.player == "rock"):
-			gameVars.player_lives -= 1
-			print("You Lose! That's honestly just sad. Player Lives: ", player_lives)
-		else:
-			print("You Won! Looking good")
-			gameVars.computer_lives -= 1
 
 	if gameVars.player_lives == 0:
 		winLose.winorlose("lost")
@@ -61,5 +40,5 @@ while gameVars.player == False:
 	else:
 		gameVars.player = False
 
-	print("player lives:", player_lives, "lives left")
-	print("ai lives:", ai_lives, "lives left")
+	print("player lives:", gameVars.player_lives, "lives left")
+	print("computer lives:", gameVars.computer_lives, "lives left")
