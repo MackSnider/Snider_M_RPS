@@ -4,7 +4,7 @@ Pick one out of the 3 options and attack the computer! No mercy, ever.
 
 ## Installation
 
-Make sure you have the latest install of Python 3. That's it!
+Make sure you have the latest install of <a href="https://www.python.org/download/release/3.0">Python 3.</a> That's it!
 
 ## Usage
 
@@ -30,10 +30,10 @@ Made by Mackenzie Snider, former Supreme RPS Champion of the World
 
 Contact fakeemailrps@macksnider.com for any questions or inquires
 
-Game build made in Python 3
+Game build made in <a href="https://wiki.python.org/main/beginnersGuide">Python 3</a>
 
 Enjoy
 
 ## License
 
-MIT
+MIT 
